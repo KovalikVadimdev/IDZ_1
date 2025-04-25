@@ -1,0 +1,26 @@
+1:
+SELECT DISTINCT lesson.week_day, lesson.lesson_number, lesson.auditorium, lesson.disciple, teacher.name, lesson.type
+FROM group_student 
+INNER JOIN lesson_groups ON group_student.ID_Groups = lesson_groups.FID_Groups 
+INNER JOIN lesson ON lesson_groups.FID_Lesson2 = lesson.ID_Lesson 
+INNER JOIN lesson_teacher ON lesson.ID_Lesson = lesson_teacher.FID_Lesson1 
+INNER JOIN teacher ON lesson_teacher.FID_Teacher = teacher.ID_Teacher 
+WHERE group_student.title = "KI-12-1";
+
+2:
+SELECT DISTINCT lesson.week_day, lesson.lesson_number, lesson.auditorium, lesson.disciple, group_student.title, lesson.type 
+FROM group_student 
+INNER JOIN lesson_groups ON group_student.ID_Groups = lesson_groups.FID_Groups 
+INNER JOIN lesson ON lesson_groups.FID_Lesson2 = lesson.ID_Lesson 
+INNER JOIN lesson_teacher ON lesson.ID_Lesson = lesson_teacher.FID_Lesson1 
+INNER JOIN teacher ON lesson_teacher.FID_Teacher = teacher.ID_Teacher 
+WHERE teacher.name = "Ivaschenko G.S.";
+
+3: 
+SELECT DISTINCT lesson.week_day, lesson.lesson_number, lesson.disciple, teacher.name, group_student.title, lesson.type 
+FROM group_student 
+INNER JOIN lesson_groups ON group_student.ID_Groups = lesson_groups.FID_Groups 
+INNER JOIN lesson ON lesson_groups.FID_Lesson2 = lesson.ID_Lesson 
+INNER JOIN lesson_teacher ON lesson.ID_Lesson = lesson_teacher.FID_Lesson1 
+INNER JOIN teacher ON lesson_teacher.FID_Teacher = teacher.ID_Teacher 
+WHERE lesson.auditorium = "104i";

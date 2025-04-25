@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB1</title>
+</head>
+<body>
+
+<h1 style='text-align: center'>Choose audience</h1>
+<form action='./selecting_audience.php' method='get'>
+    <label>
+        <select name='name_auditorium' style='display:block; margin: 15px auto; padding: 5px 15px'>
+            <option value='104i'>104i</option>
+            <option value='106i'>106i</option>
+            <option value='229'>229</option>
+            <option value='10012'>10012</option>
+        </select>
+    </label>
+    <input type='submit' name='submit_btn' style='display:block; margin: 15px auto'>
+</form>
+
+<h1 style='text-align: center'>Choose student group</h1>
+<form action='./selecting_group.php' method='get'>
+    <label>
+        <select name='name_group' style='display:block; margin: 15px auto; padding: 5px 15px'>
+            <option value='KI-12-1'>KI-12-1</option>
+            <option value='KI-12-2'>KI-12-2</option>
+            <option value='KI-12-3'>KI-12-3</option>
+            <option value='KI-12-4'>KI-12-4</option>
+            <option value='KI-12-5'>KI-12-5</option>
+        </select>
+    </label>
+    <input type='submit' name='submit_btn' style='display:block; margin: 15px auto'>
+</form>
+
+<h1 style='text-align: center'>Choose name teacher</h1>
+<form action='./selecting_teacher.php' method='get'>
+    <label>
+        <select name='teacher_name' style='display:block; margin: 15px auto; padding: 5px 15px'>
+            <option value='Kovalenko A.A.'>Kovalenko A.A.</option>
+            <option value='Yankovskiy O.A.'>Yankovskiy O.A.</option>
+            <option value='Ivaschenko G.S.'>Ivaschenko G.S.</option>
+        </select>
+    </label>
+    <input type='submit' name='submit_btn' style='display:block; margin: 15px auto'>
+</form>
+
+</body>
+</html>
